@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    width: 100vw;
+    font-size: 16px;
+    font-family: Poppins;       
+}
+ul{
+    list-style: none;
+}
+body{
+    background-color: gainsboro;
+}
+header nav.navbar__mobile{
+    display: none;
+}
+header{
+    background-color: #2776ef;
+    padding: 1rem;
+}
+header .navbar{
+    display: flex;
+    justify-content: space-around;
+}
+header .navbar div{
+    display: flex;
+    align-items: center;
+    flex-shrink: 1;
+}
+header .navbar .logo__search .logo img{
+    width: 100px;
+}
+header .navbar .logo__search{
+    gap: 2ch;
+}
+header .navbar .logo__search .inp__search{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    padding: 0.5rem 0.5rem;
+}
+header .navbar .logo__search .inp__search input{
+    border: none;
+    width: 120%;
+}
+header .navbar .logo__search .inp__search input:focus{
+    outline: none;
+}
+header .navbar .logo__search .inp__search i{
+    color: #2776ef;
+    cursor: pointer;
+}
+header .navbar .btns__cart{
+    gap: 5ch;
+    flex-shrink: 1;
+}
+header .navbar .btns__cart .login{
+    background-color: #fff;
+    color: #2776ef;
+    border: none;
+    padding: 0.5rem 2.5rem;
+    cursor: pointer;
+}
+header .navbar .btns__cart .dd__more select{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 0.8rem;
+}
+header .navbar .btns__cart{
+    color: white;
+}
+.quick__access_links{
+    background-color: #fff;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    text-transform: capitalize;
+}
+.quick__access_links ul{
+    display: flex;
+    gap: 8ch;
+    overflow-x: scroll;
+    font-size: 0.8rem;
+    text-align: center;
+}
+.quick__access_links ul li{
+    text-overflow: clip;
+}
+::-webkit-scrollbar {
+    height: 2px;
+    width: 2px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: white;
+    border: 1px solid white;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: gainsboro;
+}
+.dotd__aside, .books__music{
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 1.3ch;
+    flex-shrink: 1;
+    max-width: 95%;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+.dotd__aside .container{
+    background-color: #fff;
+    width: 75%;
+}
+.books__music .container{
+    background-color: #fff;
+    width: 90%;
+}
+.title_bar{ /* common css for both sections */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px gray solid;
+    padding: 1rem 1rem;
+}
+.dotd__aside .title_bar .common__container,
+.books__music .title_bar .common__container
+{
+    display: flex;
+    gap: 2ch;
+}
+.dotd__aside .view__btn, .books__music .view__btn{
+    margin-left: auto;
+}
+.dotd__aside .main__content ul,
+.books__music .main__content ul
+{
+    display: flex;
+    padding: 1rem;
+    overflow: scroll;
+}
+.sub-title{
+    font-size: 12px;
+    color: gray;
+}
+.dotd__aside .main__content ul li, .books__music .main__content ul li{
+    margin: 5px 15px;
+    text-align: center;
+}
+.dotd__aside .view__btn button, .books__music .view__btn button {
+    padding: 0.8rem 1.5rem;
+    background: #2776ef;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.dotd__aside ul li picture img, .books__music ul li picture img{
+    height: 100px;
+    width: 100px;
+}
+ul li .name__brands{/* common css for both sections */
+    font-size: 14px;
+}
+ul li .disc__desc{/* common css for both sections */
+    font-size: 12px;
+}
+ul li .desc{/* common css for both sections */
+    font-size: 10px;
+}
+
+aside picture img{
+    width: 70%;
+}
+@media all and (max-width: 1150px) {
+    header nav.navbar{
+        display: none;
+    }
+    header nav.navbar__mobile{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        color: white;
+    }
+    header nav.navbar__mobile .logo__search .logo img{
+        width: 100px;
+    }
+    header nav.navbar__mobile .logo__search{
+        display: flex;
+        align-items: flex-start;
+        gap: 10%;
+    }
+    header nav.navbar__mobile .logo__search i{
+        font-size: 32px;
+    }
+    header nav.navbar__mobile .btns__cart{
+        position: relative;
+        right: 3%;
+        display: flex;
+        gap: 2ch;
+        align-items: center;
+    }
+    .dd__more{
+        display: none;
+    }
+    header nav.navbar__mobile .btns__cart button{
+        border: none;
+        background-color: white;
+        color: #2776ef;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+    header nav.navbar__mobile .btns__cart .dd__more select{
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 1rem;
+    }
+    .quick__access_links{
+        padding-left: 1.5rem;
+        width: 100%;
+    }
+    .main__content ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .common__container{
+        font-size: 0.9rem;
+    }
+    .dotd__aside{
+        flex-direction: column;
+    }
+    .dotd__aside, .books__music{
+        padding: 0 9%;
+        margin: 1rem auto;
+    }
+    .dotd__aside .title_bar{
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .btns__cart{
+        flex-wrap: wrap;
+    }
+    .dotd__aside .main__content ul, .books__music .main__content ul{
+        flex-wrap: nowrap;
+    }
+    .dotd__aside .container, .books__music .container{
+        width: 100%;
+    }
+    aside.ad{
+        display: none;
+    }
+}
+@media all and (max-width: 768px){
+    .dotd__aside .main__content ul, .books__music .main__content ul{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-rows: repeat(auto-fit, minmax(min-content, max-content));
+    }
+}
+@media all and (max-width: 550px){
+    header nav.navbar__mobile{
+        flex-shrink: 1;
+    }
+    .dotd__aside .title_bar .common__container{
+        flex-direction: column;
+        flex-shrink: 1;
+    }
+}
